@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@OurTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.view.MasterPageController">
+   <top>
+      <MenuBar fx:id="mainmenu" blendMode="DARKEN" BorderPane.alignment="CENTER">
+        <menus>
+         <Menu mnemonicParsing="false" text="System">
+               <items>
+
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit">
+                  <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+          </Menu>
+           <Menu mnemonicParsing="false" text="Member">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#memberHandle" text="Member Management">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+          </Menu>
+
+           <Menu mnemonicParsing="false" text="User">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#userHandle" text="User Management">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Library">
+               <items>
+
+                  <MenuItem mnemonicParsing="false" onAction="#handleBook" text="Book Management">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleCheckout" text="Checkout History" />
+               </items>
+          </Menu>
+
+          <Menu mnemonicParsing="false" text="About Us">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Label fx:id="statusBar" alignment="CENTER" lineSpacing="2.0" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="600.0" style="-fx-background-color: green;" text="Library Management System" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
